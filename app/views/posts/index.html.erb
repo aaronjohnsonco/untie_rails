@@ -1,0 +1,49 @@
+<%= render 'partials/navbar' %>
+<div class="post-pg">
+	<div class="mobile-search">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12"><input type="text" class="form-control" placeholder="Search" /></div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="container">
+		<div class="row">
+			
+			
+			<div class="col-md-8">
+				<% for post in @posts %>
+				<div class="post-container">
+					<p class="latobold post-detail-top"><%= post.pub_date.strftime('%B') %> <%= post.pub_date.day.ordinalize %> &mdash; <span class="lime">Family Law</span></p>
+					<h2 class="latoblack post-title"><%= link_to post.title, post, class: "post-link" %></h2>
+					<!--<p class="latobold post-detail">Posted by <%= post.author %> on <%= post.pub_date.strftime('%B %-d, %Y') %></p>-->
+					<div class="post-text">
+						<%= sanitize(post.body).truncate(200).html_safe %>
+					</div>
+					<%= link_to "Read more...", post, class: "read-more" %>
+				</div>
+				<% end %>
+			</div>
+			<div class="col-md-offset-1 col-md-3">
+				<div class="sidebar-container">
+					<input type="text" class="form-control" placeholder="Search" />
+					<div class="sidebar-follow">
+						<h3 class="latoregular text-center">Follow</h3>
+						<p class="text-center">
+        		  <%= render 'social' %>
+        		</p>
+					</div>
+					<div class="sidebar-twitter">
+						<h3 class="latoregular text-center">Twitter</h3>
+						<a class="twitter-timeline" href="https://twitter.com/AttyGirl2014" data-widget-id="626569985880670208">Tweets by @AttyGirl2014</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render 'partials/footer' %>

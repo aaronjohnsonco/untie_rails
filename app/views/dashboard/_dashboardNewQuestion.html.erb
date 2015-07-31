@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="main-heading latolight">New Question</h2>
+		</div>
+	</div>
+	<div class="row">
+		<%= form_for Question.new do |f| %>
+		<div class="col-md-12">
+			<div class="form-group">
+				<%= f.text_field :name, class: "form-control-post-title", placeholder: "Question", autofocus: true %>
+			</div>
+			<div class="form-group">
+				<%= f.text_area :answer, class: "form-control redactor" %>
+			</div>
+		
+			<%= f.submit "Publish Now", class: "btn btn-pink", name: "publish" %>
+			<%= f.submit "Save as Draft", class: "btn btn-green", name: "draft" %>
+		</div>
+		<% end %>
+	</div>
+</div>

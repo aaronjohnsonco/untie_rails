@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="main-heading latolight">FAQ Questions<a href="/dashboard/questions/new"><span class="btn btn-green pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<tr>
+						<th class="latoblack">Question</th>
+						<th class="latoblack">Status</th>
+						<th></th>
+					</tr>
+					<% for question in @questions %>
+					<tr>
+						<td class="latoregular"><%= question.name %></td>
+						<% if question.status === "published" %>
+							<td class="latoblack dark-green"><%= question.status.capitalize %></td>
+							<% elsif question.status === "draft" %>
+							<td class="latoregular gray"><%= question.status.capitalize %></td>
+							<% end %>
+						<td>
+							<%= link_to question, method: :delete, data: { confirm: "Are you sure?" } do %>
+								<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"	></span>
+							<% end %>
+						</td>
+					</tr>
+					<% end %>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
