@@ -4,7 +4,7 @@ lock '3.1.0'
 set :application, 'untietheknot'
 set :repo_url, 'https://insomniapplabs:h0lein0ne@github.com/insomniapplabs/untietheknot.git'
 
-set :rbenv_ruby, '2.2.1'
+set :rbenv_ruby, '2.2.0'
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
