@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: untietheknot_production
-  username: untietheknot
+  username: db_untie
   password: <%= ENV['UNTIETHEKNOT_DATABASE_PASSWORD'] %>
