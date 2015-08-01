@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'untietheknot'
-set :repo_url, 'https://insomniapplabs:h0lein0ne@github.com/insomniapplabs/untie_rails.git'
+set :repo_url, 'https://insomniapplabs:h0lein0ne@github.com/insomniapplabs/untie_railssudo.git'
 
 set :rbenv_ruby, '2.2.0'
 # Default branch is :master
