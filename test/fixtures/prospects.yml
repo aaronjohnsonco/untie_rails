@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  date_of_marriage: 2015-07-31
+  county_of_marriage: MyString
+  street: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  resided_how_long: MyString
+  email: MyString
+  phone: MyString
+  number_of_children: MyString
+  ages: MyString
+  co_own_business: false
+  co_own_property: false
+
+two:
+  full_name: MyString
+  date_of_marriage: 2015-07-31
+  county_of_marriage: MyString
+  street: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  resided_how_long: MyString
+  email: MyString
+  phone: MyString
+  number_of_children: MyString
+  ages: MyString
+  co_own_business: false
+  co_own_property: false

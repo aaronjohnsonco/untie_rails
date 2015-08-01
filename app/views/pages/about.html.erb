@@ -334,58 +334,58 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title latoregular text-center white" id="myModalLabel">Basic ID Info</h3>
+        <h3 class="modal-title latoregular text-center white" id="myModalLabel">Basic Divorce Info</h3>
       </div>
       <div class="modal-body">
-        <%= form_for Contact.new do |f| %>
+        <%= form_for Prospect.new do |f| %>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label class="green-label latoregular">Full Name</label>
-                <%= f.text_field :name, class: "form-control-modal" %>
+                <%= f.text_field :full_name, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Date of Marriage</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :date_of_marriage, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">County of Marriage</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :county_of_marriage, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-12">
               <div class="form-group">
                 <label class="green-label latoregular">Street Addresss</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :street, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">City</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :city, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">State</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :state, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Zip</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :zip, class: "form-control-modal" %>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">How long resided there?</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :resided_how_long, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
@@ -397,16 +397,17 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Phone</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :phone, class: "form-control-modal" %>
               </div>
             </div>
           </div>
-        <% end %>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-lime">Submit</button>
+        <%= f.submit "Submit", class: "btn btn-lime", name: "about1" %>
       </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -419,58 +420,58 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title latoregular text-center white" id="myModalLabel">ID with Property Info</h3>
+        <h3 class="modal-title latoregular text-center white" id="myModalLabel">Divorce with Property Info</h3>
       </div>
       <div class="modal-body">
-        <%= form_for Contact.new do |f| %>
+        <%= form_for Prospect.new do |f| %>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label class="green-label latoregular">Full Name</label>
-                <%= f.text_field :name, class: "form-control-modal" %>
+                <%= f.text_field :full_name, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Date of Marriage</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :date_of_marriage, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">County of Marriage</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :county_of_marriage, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-12">
               <div class="form-group">
                 <label class="green-label latoregular">Street Addresss</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :street, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">City</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :city, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">State</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :state, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Zip</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :zip, class: "form-control-modal" %>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">How long resided there?</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :resided_how_long, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
@@ -482,7 +483,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Phone</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :phone, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
@@ -502,12 +503,13 @@
               </div>
             </div>
           </div>
-        <% end %>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-lime">Submit</button>
+        <%= f.submit "Submit", class: "btn btn-lime", name: "about2" %>
       </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -520,58 +522,58 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title latoregular text-center white" id="myModalLabel">ID with Children Info</h3>
+        <h3 class="modal-title latoregular text-center white" id="myModalLabel">Divorce with Children Info</h3>
       </div>
       <div class="modal-body">
-        <%= form_for Contact.new do |f| %>
+        <%= form_for Prospect.new do |f| %>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label class="green-label latoregular">Full Name</label>
-                <%= f.text_field :name, class: "form-control-modal" %>
+                <%= f.text_field :full_name, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Date of Marriage</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :date_of_marriage, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">County of Marriage</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :county_of_marriage, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-12">
               <div class="form-group">
                 <label class="green-label latoregular">Street Addresss</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :street, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">City</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :city, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">State</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :state, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Zip</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :zip, class: "form-control-modal" %>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">How long resided there?</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :resided_how_long, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
@@ -583,19 +585,19 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">Phone</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :phone, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">How many children?</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :number_of_children, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="green-label latoregular">What are their ages?</label>
-                <%= f.text_field :email, class: "form-control-modal" %>
+                <%= f.text_field :ages, class: "form-control-modal" %>
               </div>
             </div>
             <div class="col-md-6">
@@ -615,12 +617,13 @@
               </div>
             </div>
           </div>
-        <% end %>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-lime">Submit</button>
+        <%= f.submit "Submit", class: "btn btn-lime", name: "about3" %>
       </div>
+      <% end %>
     </div>
   </div>
 </div>

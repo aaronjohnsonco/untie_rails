@@ -19,6 +19,18 @@ class PagesController < ApplicationController
 	end
 
 	def basic
+    @footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').limit(4)
 	end
+
+  def property
+    @footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').limit(4)
+  end
+
+  def children
+    @footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').limit(4)
+  end
+
+
+
 
 end

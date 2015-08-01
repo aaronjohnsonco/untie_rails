@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :prospects
+
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
   get 'about', to: 'pages#about'
   get 'faq', to: 'pages#faq'
   get 'bio', to: 'pages#bio'
-  get 'basic-id', to: 'pages#basic'
+  get 'basic-divorce', to: 'pages#basic'
+  get 'divorce-with-property', to: 'pages#property'
+  get 'divorce-with-children', to: 'pages#children'
   get 'dashboard', to: 'dashboard#index'
   get 'dashboard/questions'
   get 'dashboard/posts'
