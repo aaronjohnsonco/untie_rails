@@ -1,35 +1,46 @@
 <div class="container-fluid">
+
+<div class="dashboard-box-top">
+
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="main-heading latolight">Posts<a href="/dashboard/posts/new"><span class="btn btn-green pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
+			<h2 class="main-heading latolight sky-blue">Posts<a href="/dashboard/posts/new"><span class="btn btn-navy pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<div class="table-responsive">
-				<table class="table table-hover">
-					<tr>
-						<th class="latoblack">Post Title</th>
-						<th class="latoblack">Publication Date</th>
-						<th class="latoblack">Author</th>
-						<th class="latoblack">Status</th>
-						<th class="latoblack"></th>
-					</tr>
-					<% for post in @posts %>
+			
+				<div class="table-responsive">
+					<table class="table table-hover">
 						<tr>
-							<td class="latoregular"><%= post.title %></td>
-							<td class="latoregular"><%= post.pub_date.strftime('%B %-d, %Y') %></td>
-							<td class="latoregular"><%= post.author %></td>
-							<% if post.status === "published" %>
-							<td class="latoblack dark-green"><%= post.status.capitalize %></td>
-							<% elsif post.status === "draft" %>
-							<td class="latoregular gray"><%= post.status.capitalize %></td>
-							<% end %>
-							<td class="latoregular"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"	></span></td>
+							<th class="latoblack main-text">Post Title</th>
+							<th class="latoblack main-text">Publication Date</th>
+							<th class="latoblack main-text">Status</th>
+							<th class="latoblack main-text"></th>
 						</tr>
-					<% end %>
-				</table>
-			</div>
+						<% for post in @posts %>
+							<tr>
+								<td class="latoregular"><%= link_to post.title, edit_post_path(post) %></td>
+								<td class="latoregular"><%= post.pub_date.strftime('%B %-d, %Y') %>	</td>
+								<% if post.status === "published" %>
+								<td class="latoblack sky-blue"><%= post.status.capitalize %></td>
+								<% elsif post.status === "draft" %>
+								<td class="latoregular gray"><%= post.status.capitalize %></td>
+								<% end %>
+								<td>
+									<%= link_to post, method: :delete, data: {confirm: "Are you sure?" } do %>
+										<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+
+					</table>
+					<%= paginate @posts, :theme => 'twitter-bootstrap-3' %>
+				</div>
+
 		</div>
 	</div>
+
+</div>
 </div>

@@ -12,12 +12,20 @@ Rails.application.routes.draw do
   get 'divorce-with-children', to: 'pages#children'
   get 'dashboard', to: 'dashboard#index'
   get 'dashboard/questions'
+  get 'dashboard/prospects'
   get 'dashboard/posts'
   get 'dashboard/posts/new', to: 'dashboard#newpost'
+  get 'dashboard/posts/:id/edit', to: 'dashboard#editpost', as: "edit_post"
   get 'dashboard/questions/new', to: 'dashboard#newquestion'
+  get 'dashboard/questions/:id/edit', to: 'dashboard#editquestion', as: "edit_question"
+
+
+  get 'posts/tags/:tag', to: 'posts#index', as: "tag"
 
   resources :questions
-  resources :posts
+  resources :posts do
+    get :autocomplete_tag_name, :on => :collection
+  end
   resources :contacts
 
   root to: 'pages#home'

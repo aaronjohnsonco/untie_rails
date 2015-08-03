@@ -47,6 +47,12 @@ gem 'capistrano-figaro-yml', '~> 1.0.2'
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'rails-jquery-autocomplete'
+
+gem 'bootstrap-editable-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

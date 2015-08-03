@@ -1,58 +1,90 @@
 <div class="container-fluid">
-	<div class="row">
+	<!--<div class="row">
 		<div class="col-md-12">
-			<h2 class="main-heading latolight">Welcome back <span class="sky-blue">Aaron&nbsp;Johnson</span></h2>
+			<h2 class="main-heading latolight navy">Welcome back, <span class="navy">Aaron&nbsp;Johnson</span></h2>
 		</div>
-	</div>
+	</div>-->
 	<div class="row">
 		<div class="col-md-6">
-			<h2 class="latolight dash-header">Your Recent Posts<a href="/dashboard/posts/new"><span class="btn btn-green pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
-			<div class="table-responsive">
-				<table class="table table-hover">
-					<tr>
-						<th class="latoblack">Post Title</th>
-						<th class="latoblack">Publication Date</th>
-						<th class="latoblack">Author</th>
-						<th class="latoblack">Status</th>
-						<th class="latoblack"></th>
-					</tr>
-					<% for post in @posts %>
+			<div class="dashboard-box">
+				<h2 class="latolight dash-header sky-blue">Recent Posts<a href="/dashboard/posts/new"><span class="btn btn-navy pull-right"><span class="glyphicon glyphicon-plus" aria-	hidden="true"></span></span></a></h2>
+				<div class="table-responsive">
+					<table class="table table-hover">
 						<tr>
-							<td class="latoregular"><%= post.title %></td>
-							<td class="latoregular"><%= post.pub_date.strftime('%B %-d, %Y') %></td>
-							<td class="latoregular"><%= post.author %></td>
-							<% if post.status === "published" %>
-							<td class="latoblack dark-green"><%= post.status.capitalize %></td>
-							<% elsif post.status === "draft" %>
-							<td class="latoregular gray"><%= post.status.capitalize %></td>
-							<% end %>
-							<td class="latoregular"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"	></span></td>
+							<th class="latoblack">Post Title</th>
+							<th class="latoblack">Publication Date</th>
+							<th class="latoblack">Status</th>
+							<th class="latoblack"></th>
 						</tr>
-					<% end %>
-				</table>
+						<% for post in @posts %>
+							<tr>
+								<td class="latoregular"><%= post.title %></td>
+								<td class="latoregular"><%= post.pub_date.strftime('%B %-d, %Y') %></td>
+								<% if post.status === "published" %>
+								<td class="latoblack sky-blue"><%= post.status.capitalize %></td>
+								<% elsif post.status === "draft" %>
+								<td class="latoregular gray"><%= post.status.capitalize %></td>
+								<% end %>
+								<td class="latoregular"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"	></span></td>
+							</tr>
+						<% end %>
+					</table>
+					<p class="latobold view-all"><%= link_to "View all Posts", dashboard_posts_path, class: "btn btn-navy" %>
+				</div>	
 			</div>
 		</div>
 		<div class="col-md-6">
-			<h2 class="latolight dash-header">FAQ Questions<a href="/dashboard/questions/new"><span class="btn btn-green pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
-			<div class="table-responsive">
-				<table class="table table-hover">
-					<tr>
-						<th class="latoblack">Question</th>
-						<th class="latoblack">Status</th>
-						<th></th>
-					</tr>
-					<% for question in @questions %>
-					<tr>
-						<td class="latoregular"><%= question.name %></td>
-						<% if question.status === "published" %>
-							<td class="latoblack dark-green"><%= question.status.capitalize %></td>
-							<% elsif question.status === "draft" %>
-							<td class="latoregular gray"><%= question.status.capitalize %></td>
-							<% end %>
-						<td><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"	></span></td>
-					</tr>
-					<% end %>
-				</table>
+			<div class="dashboard-box">
+				<h2 class="latolight dash-header sky-blue"> Recent FAQ<a href="/dashboard/questions/new"><span class="btn btn-navy pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<tr>
+							<th class="latoblack">Question</th>
+							<th class="latoblack">Status</th>
+							<th></th>
+						</tr>
+						<% for question in @questions %>
+						<tr>
+							<td class="latoregular"><%= question.name %></td>
+							<% if question.status === "published" %>
+								<td class="latoblack sky-blue"><%= question.status.capitalize %></td>
+								<% elsif question.status === "draft" %>
+								<td class="latoregular gray"><%= question.status.capitalize %></td>
+								<% end %>
+							<td><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"	></span></td>
+						</tr>
+						<% end %>
+					</table>
+					<p class="latobold view-all"><%= link_to "View all Questions", dashboard_questions_path, class: "btn btn-navy" %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="dashboard-box">
+				<h2 class="latolight dash-header sky-blue">Recent Prospects</h2>
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<tr>
+							<th class="latoblack">Name</th>
+							<th class="latoblack">Email</th>
+							<th class="latoblack">Phone</th>
+							<th class="latoblack">Type</th>
+							<th></th>
+						</tr>
+						<% for prospect in @prospects %>
+						<tr>
+							<td class="latoregular"><%= prospect.full_name %></td>
+							<td class="latoregular"><%= prospect.email %></td>
+							<td class="latoregular"><%= prospect.phone %></td>
+							<td class="latoregular"><%= prospect.option %></td>
+							<td class="latoregular"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"	></span></td>
+						</tr>
+						<% end %>
+					</table>
+					<p class="latobold view-all"><%= link_to "View all Prospects", dashboard_prospects_path, class: "btn btn-navy" %>
+				</div>
 			</div>
 		</div>
 	</div>

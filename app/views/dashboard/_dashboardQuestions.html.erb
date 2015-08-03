@@ -1,7 +1,8 @@
 <div class="container-fluid">
+	<div class="dashboard-box-top">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="main-heading latolight">FAQ Questions<a href="/dashboard/questions/new"><span class="btn btn-green pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
+			<h2 class="main-heading latolight">FAQ Questions<a href="/dashboard/questions/new"><span class="btn btn-navy pull-right"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span></a></h2>
 		</div>
 	</div>
 	<div class="row">
@@ -9,15 +10,15 @@
 			<div class="table-responsive">
 				<table class="table table-hover">
 					<tr>
-						<th class="latoblack">Question</th>
-						<th class="latoblack">Status</th>
+						<th class="latoblack main-text">Question</th>
+						<th class="latoblack main-text">Status</th>
 						<th></th>
 					</tr>
 					<% for question in @questions %>
 					<tr>
-						<td class="latoregular"><%= question.name %></td>
+						<td class="latoregular"><%= link_to question.name, edit_question_path(question) %></td>
 						<% if question.status === "published" %>
-							<td class="latoblack dark-green"><%= question.status.capitalize %></td>
+							<td class="latoblack sky-blue"><%= question.status.capitalize %></td>
 							<% elsif question.status === "draft" %>
 							<td class="latoregular gray"><%= question.status.capitalize %></td>
 							<% end %>
@@ -29,7 +30,9 @@
 					</tr>
 					<% end %>
 				</table>
+				<%= paginate @questions, :theme => 'twitter-bootstrap-3' %>
 			</div>
 		</div>
 	</div>
+</div>
 </div>

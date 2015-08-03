@@ -2,11 +2,11 @@
 	<div class="dashboard-box-top">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="main-heading latolight sky-blue">New Post</h2>
+			<h2 class="main-heading latolight sky-blue">Edit Post</h2>
 		</div>
 	</div>
 	<div class="row">
-		<%= form_for Post.new do |f| %>
+		<%= form_for @post do |f| %>
 		<div class="col-md-8">
 			<div class="form-group">
 				<%= f.text_field :title, class: "form-control-post-title", placeholder: "Post Title", autofocus: true %>
@@ -26,11 +26,21 @@
 			</div>
 			<div class="form-group" id="date_picker">
 				<label>Publication Date</label>
-				<%= f.text_field :pub_date, class: "form-control", placeholder: "Click for calendar" %>
+				<%= f.text_field :pub_date, class: "form-control", placeholder: "Publication Date" %>
 			</div>
-			<%= f.submit "Publish Now", class: "btn btn-navy", name: "publish" %>
-			<%= f.submit "Save as Draft", class: "btn btn-default", name: "draft" %>
+			<div class="form-group">
+				<% if @post.status == "published" %>
+					<p class="latobold main-text">Current Status: <span class="sky-blue"><%= @post.status.capitalize %></span></p>
+					<%= f.submit "Update Post", class: "btn btn-navy", name: "publish" %>
+					<%= f.submit "Unpublish", class: "btn btn-default", name: "draft" %>
+				<% elsif @post.status == "draft" %>
+					<p class="latobold main-text">Current Status: <span class="light-gray"><%= @post.status.capitalize %></span></p>
+					<%= f.submit "Publish Now", class: "btn btn-navy", name: "publish" %>
+					<%= f.submit "Update Draft", class: "btn btn-default", name: "draft" %>
+				<% end %>
+			</div>
 
+			
 			
 			
   

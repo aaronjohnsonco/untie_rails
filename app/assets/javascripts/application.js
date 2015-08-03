@@ -15,5 +15,8 @@
 //= require redactor-rails
 //= require bootstrap-datepicker
 //= require jquery_ujs
+//= require bootstrap-editable
+//= require bootstrap-editable-rails
+//= require autocomplete-rails
 //= require turbolinks
 //= require_tree .

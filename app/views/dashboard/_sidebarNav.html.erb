@@ -2,7 +2,15 @@
 	<p class="latolight small-text"><span class="gray">Hello,</span> <span class="white">Aaron Johnson</span></p>
 </div>
 <ul>
-	<li><a href="/dashboard">Dashboard</a></li>
+	<!--<li><a href="/dashboard">Dashboard</a></li>
 	<li><a href="/dashboard/posts">Posts</a></li>
-	<li><a href="/dashboard/questions">FAQ Question</a></li>
+	<li><a href="/dashboard/questions">FAQ</a></li>
+	<li><a href="/dashboard/prospects">Prospects</a></li>-->
+
+	<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'index' %>"><a href="/dashboard">Dashboard</a></li>
+	<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'posts' %>"><a href="/dashboard/posts">Posts</a></li>
+	<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'questions' %>"><a href="/dashboard/questions">FAQ</a></li>
+	<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'prospects' %>"><a href="/dashboard/prospects">Prospects</a></li>
+
+
 </ul>

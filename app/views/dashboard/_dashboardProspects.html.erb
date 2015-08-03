@@ -1,0 +1,68 @@
+<div class="container-fluid">
+	<div class="dashboard-box-top">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="main-heading latolight sky-blue">Prospects</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p class="latolight">Click on name to view full details</p>
+		<div class="table-responsive">
+			<table class="table table-hover">
+				<tr>
+					<th class="latoblack main-text">Name</th>
+					<th class="latoblack main-text">Received</th>
+					<th class="latoblack main-text">Type</th>
+					<th class="latoblack main-text">Conflict Status</th>
+					<th class="latoblack main-text"></th>
+				</tr>
+				<% for prospect in @prospects %>
+					<tr>
+						<td class="latoregular sky-blue"><%= link_to prospect.full_name, "", data: {toggle: "modal", target: "#prospectModal-#{prospect.id}"} %></td>
+						<td class="latoregular"><%= prospect.created_at.strftime('%B %-d, %Y') %>	</td>
+						<td class="latoregular"><%= prospect.option %></td>
+						<td class="latoregular"><a href="#" id="status" data-type="select" data-resource="prospect" data-name="status" data-url="/prospects/<%= prospect.id %>" data-original-title="Enter status"><%= prospect.status %></a></td>
+
+
+
+
+						<td>
+									<%= link_to prospect, method: :delete, data: {confirm: "Are you sure?" } do %>
+										<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
+									<% end %>
+								</td>
+					</tr>
+
+
+
+
+					<!-- Modal -->
+<div class="modal fade" id="prospectModal-<%= prospect.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel"><%= prospect.option %></h4>
+      </div>
+      <div class="modal-body">
+      	<%= prospect.full_name %>
+        <%= prospect.email %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-navy">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+				<% end %>
+
+			</table>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+

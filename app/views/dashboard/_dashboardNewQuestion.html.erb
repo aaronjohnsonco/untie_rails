@@ -1,7 +1,8 @@
 <div class="container-fluid">
+	<div class="dashboard-box-top">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="main-heading latolight">New Question</h2>
+			<h2 class="main-heading latolight sky-blue">New Question</h2>
 		</div>
 	</div>
 	<div class="row">
@@ -11,12 +12,13 @@
 				<%= f.text_field :name, class: "form-control-post-title", placeholder: "Question", autofocus: true %>
 			</div>
 			<div class="form-group">
-				<%= f.text_area :answer, class: "form-control redactor" %>
+				<%= f.text_area :answer, class: "form-control redactor", placeholder: "Add answer..." %>
 			</div>
 		
-			<%= f.submit "Publish Now", class: "btn btn-pink", name: "publish" %>
-			<%= f.submit "Save as Draft", class: "btn btn-green", name: "draft" %>
+			<%= f.submit "Publish Now", class: "btn btn-navy", name: "publish" %>
+			<%= f.submit "Save as Draft", class: "btn btn-default", name: "draft" %>
 		</div>
 		<% end %>
 	</div>
+</div>
 </div>

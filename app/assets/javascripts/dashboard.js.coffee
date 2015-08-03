@@ -9,5 +9,24 @@ ready = ->
 		todayHighlight: true
 		orientation: "top"
 
+	$('#status').editable
+		source: [
+			{
+				value: 'Pending'
+				text: 'Pending'
+			}
+			{
+				value: 'No Conflict'
+				text: 'No Conflict'
+			}
+			{
+				value: 'Conflict'
+				text: 'Conflict'
+			}
+		]
+
+
+	
+
 $(document).ready(ready)
 $(document).on('page:load', ready)
