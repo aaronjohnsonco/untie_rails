@@ -11,18 +11,18 @@
 		<div class="table-responsive">
 			<table class="table table-hover">
 				<tr>
-					<th class="latoblack main-text">Name</th>
-					<th class="latoblack main-text">Received</th>
-					<th class="latoblack main-text">Type</th>
-					<th class="latoblack main-text">Conflict Status</th>
-					<th class="latoblack main-text"></th>
+					<th class="latobold main-text">Name</th>
+					<th class="latobold main-text">Received</th>
+					<th class="latobold main-text">Type</th>
+					<th class="latobold main-text">Conflict Status</th>
+					<th class="latobold main-text"></th>
 				</tr>
 				<% for prospect in @prospects %>
 					<tr>
 						<td class="latoregular sky-blue"><%= link_to prospect.full_name, "", data: {toggle: "modal", target: "#prospectModal-#{prospect.id}"} %></td>
 						<td class="latoregular"><%= prospect.created_at.strftime('%B %-d, %Y') %>	</td>
 						<td class="latoregular"><%= prospect.option %></td>
-						<td class="latoregular"><a href="#" id="status" data-type="select" data-resource="prospect" data-name="status" data-url="/prospects/<%= prospect.id %>" data-original-title="Enter status"><%= prospect.status %></a></td>
+						<td class="latoregular"><a href="#" id="status" data-type="select" data-resource="prospect" data-name="status" data-url="/prospects/<%= prospect.id %>" data-original-title="Edit status"><%= prospect.status %></a></td>
 
 
 

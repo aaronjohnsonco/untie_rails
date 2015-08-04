@@ -11,17 +11,17 @@
 				<div class="table-responsive">
 					<table class="table table-hover">
 						<tr>
-							<th class="latoblack">Post Title</th>
-							<th class="latoblack">Publication Date</th>
-							<th class="latoblack">Status</th>
-							<th class="latoblack"></th>
+							<th class="latobold">Post Title</th>
+							<th class="latobold">Publication Date</th>
+							<th class="latobold">Status</th>
+							<th class="latobold"></th>
 						</tr>
 						<% for post in @posts %>
 							<tr>
 								<td class="latoregular"><%= post.title %></td>
 								<td class="latoregular"><%= post.pub_date.strftime('%B %-d, %Y') %></td>
 								<% if post.status === "published" %>
-								<td class="latoblack sky-blue"><%= post.status.capitalize %></td>
+								<td class="latobold sky-blue"><%= post.status.capitalize %></td>
 								<% elsif post.status === "draft" %>
 								<td class="latoregular gray"><%= post.status.capitalize %></td>
 								<% end %>
@@ -39,15 +39,15 @@
 				<div class="table-responsive">
 					<table class="table table-hover">
 						<tr>
-							<th class="latoblack">Question</th>
-							<th class="latoblack">Status</th>
+							<th class="latobold">Question</th>
+							<th class="latobold">Status</th>
 							<th></th>
 						</tr>
 						<% for question in @questions %>
 						<tr>
 							<td class="latoregular"><%= question.name %></td>
 							<% if question.status === "published" %>
-								<td class="latoblack sky-blue"><%= question.status.capitalize %></td>
+								<td class="latobold sky-blue"><%= question.status.capitalize %></td>
 								<% elsif question.status === "draft" %>
 								<td class="latoregular gray"><%= question.status.capitalize %></td>
 								<% end %>
@@ -67,10 +67,10 @@
 				<div class="table-responsive">
 					<table class="table table-hover">
 						<tr>
-							<th class="latoblack">Name</th>
-							<th class="latoblack">Email</th>
-							<th class="latoblack">Phone</th>
-							<th class="latoblack">Type</th>
+							<th class="latobold">Name</th>
+							<th class="latobold">Email</th>
+							<th class="latobold">Phone</th>
+							<th class="latobold">Type</th>
 							<th></th>
 						</tr>
 						<% for prospect in @prospects %>

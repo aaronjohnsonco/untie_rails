@@ -10,15 +10,15 @@
 			<div class="table-responsive">
 				<table class="table table-hover">
 					<tr>
-						<th class="latoblack main-text">Question</th>
-						<th class="latoblack main-text">Status</th>
+						<th class="latobold main-text">Question</th>
+						<th class="latobold main-text">Status</th>
 						<th></th>
 					</tr>
 					<% for question in @questions %>
 					<tr>
 						<td class="latoregular"><%= link_to question.name, edit_question_path(question) %></td>
 						<% if question.status === "published" %>
-							<td class="latoblack sky-blue"><%= question.status.capitalize %></td>
+							<td class="latobold sky-blue"><%= question.status.capitalize %></td>
 							<% elsif question.status === "draft" %>
 							<td class="latoregular gray"><%= question.status.capitalize %></td>
 							<% end %>

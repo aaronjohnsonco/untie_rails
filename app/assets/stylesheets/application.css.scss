@@ -156,7 +156,7 @@
 .light-green { color:#2ecc71; }
 .pale-green { color:#EBFFD4; }
 .gray { color:#87888E; }
-.green-label { color:#fff; }
+.green-label { color:#34302D; }
 .blue { color:#34495e; }
 .purple { color:#9b59b6; }
 .sky-blue { color:#33BDDB; }
@@ -919,8 +919,8 @@ textarea.form-control {
   padding: 8px 14px;
   font-size: 18px;
   line-height: 1.42857143;
-  color: #ddd;
-  background-color: #221e1b;
+  color: #222;
+  background-color: #fff;
   background-image: none;
   border: none;
   border-radius: 2px;
@@ -1137,9 +1137,10 @@ input[type="search"] {
 }
 .modal-header {
   min-height: 16.42857143px;
-  padding: 15px 15px 0 15px;
-  background:#EDEAE3;
-  border-color:#EDEAE3;
+  padding: 15px 15px 15px 15px;
+  background:#eee;
+  border-bottom:1px solid #ddd;
+ 
 }
 .modal-header .close {
   margin-top: -2px;
@@ -1152,7 +1153,7 @@ input[type="search"] {
 .modal-body {
   position: relative;
   padding: 15px 25px 25px 25px;
-  background:#EDEAE3;
+  background:#eee;
 }
 .modal-footer {
   padding: 25px 25px;
