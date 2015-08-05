@@ -16,7 +16,7 @@
 			<div class="col-md-8">
 				<% for post in @posts %>
 				<div class="post-container">
-					<p class="latobold post-detail-top"><%= post.pub_date.strftime('%B') %> <%= post.pub_date.day.ordinalize %> &mdash; <span class="lime"><%= raw tag_links(post.all_tags) %></span></p>
+					<p class="latobold post-detail-top"><%= post.pub_date.strftime('%B') %> <%= post.pub_date.day.ordinalize %> &mdash; <span class="pale-green lato-regular"><%= raw tag_links(post.all_tags) %></span></p>
 					<h2 class="latoblack post-title"><%= link_to post.title, post, class: "post-link" %></h2>
 					<!--<p class="latobold post-detail">Posted by <%= post.author %> on <%= post.pub_date.strftime('%B %-d, %Y') %></p>-->
 					<div class="post-text">
