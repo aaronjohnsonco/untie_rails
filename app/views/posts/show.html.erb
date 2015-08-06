@@ -5,7 +5,7 @@
 			<div class="col-md-8">
 				<div class="post-container">
 					<h2 class="latoblack post-title"><%= @post.title %></h2>
-					<p class="latoregular post-detail light-gray">Posted on <%= @post.pub_date.strftime('%B %-d, %Y') %> in <span class="lime"><%= raw tag_links(@post.all_tags) %></span></p>
+					<p class="latoregular post-detail charcoal">Posted on <%= @post.pub_date.strftime('%B %-d, %Y') %> in <span class="lime"><%= raw tag_links(@post.all_tags) %></span></p>
 					<div class="post-text">
 						<%= sanitize @post.body %>
 					</div>

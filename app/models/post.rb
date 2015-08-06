@@ -23,5 +23,18 @@ class Post < ActiveRecord::Base
   	Tag.select("tags.id, tags.name,count(taggings.tag_id) as count").joins(:taggings).group("taggings.tag_id, tags.id, tags.name")
   end
 
+  def self.search(search)
+    where("title LIKE ? OR body LIKE ?", "%#{search}%", "%#{search}%")
+  end
+
 
 end
+
+
+#def self.search(search)
+#    if search
+#      find(:all, conditions: ['title || body LIKE ?', "%#{search}%"], conditions: ['status = ? AND published_on <= ?', "Published", Date.today], order: "published_on DESC")
+#    else
+#      find(:all, conditions: ['status = ? AND published_on <= ?', "Published", Date.today], order: "published_on DESC")
+#    end
+#  end
