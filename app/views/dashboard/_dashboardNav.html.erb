@@ -12,10 +12,11 @@
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="/dashboard" class="latolight">Dashboard</a></li>
-	        <li><a href="/dashboard/posts" class="latolight">Posts</a></li>
-	        <li><a href="/dashboard/questions" class="latolight">FAQ</a></li>
-	        <li><a href="/dashboard/prospects" class="latolight">Prospects</a></li>
+	        <li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'index' %>"><a href="/dashboard">Dashboard</a></li>
+					<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'posts' %>"><a href="/dashboard/posts">Posts</a></li>
+					<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'questions' %>"><a href="/dashboard/questions">FAQ</a></li>
+					<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'prospects' %>"><a href="/dashboard/prospects">Prospects</a></li>
+	        <li><%= link_to "Logout", destroy_user_session_path, class: "latolight", method: :delete %> </li>
 	      </ul>
 	      <!--<form class="navbar-form navbar-right">
 	        <input type="text" class="form-control" placeholder="Search...">

@@ -425,6 +425,12 @@ a.footer-link:hover { color:#fff;text-decoration:none; }
 .prospect-text-nospace { margin-bottom:0; }
 
 
+/* LOGIN PAGE */
+.login-page { height:100vh;background-color:#262831; }
+.sign-in-box { margin-top:250px; }
+.main-link { margin-top:15px; }
+
+
 /* CUSTOM BOOTSTRAP */
 .thumbnail {
   display: block;
@@ -519,9 +525,7 @@ a.thumbnail.active {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: none;
 }
 .btn:hover,
 .btn:focus,
@@ -532,7 +536,7 @@ a.thumbnail.active {
 .btn:active,
 .btn.active {
   background-image: none;
-  outline: 0;
+  outline: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
@@ -703,6 +707,66 @@ fieldset[disabled] .btn-bright.active {
   color: #fff;
   background-color: #333;
 }
+
+
+
+
+.btn-light-blue {
+  color: #fff;
+  background-color: #33BDDB;
+  border-color: #33BDDB;
+ 
+  font-family:'latoregular';
+  text-transform:uppercase;
+  -webkit-transition: background-color .2s ease-in-out;
+       -o-transition: background-color .2s ease-in-out;
+          transition: background-color .2s ease-in-out;
+}
+
+
+.btn-light-blue:hover,
+.btn-light-blue:focus,
+.btn-light-blue.focus,
+.btn-light-blue:active,
+.btn-light-blue.active,
+.open > .dropdown-toggle.btn-light-blue {
+  color: #fff;
+  background-color: #0096b3;
+  border-color: #0096b3;
+  text-decoration:none;
+}
+.btn-light-blue:active,
+.btn-light-blue.active,
+.open > .dropdown-toggle.btn-light-blue {
+  background-image: none;
+}
+.btn-light-blue.disabled,
+.btn-light-blue[disabled],
+fieldset[disabled] .btn-light-blue,
+.btn-light-blue.disabled:hover,
+.btn-light-blue[disabled]:hover,
+fieldset[disabled] .btn-light-blue:hover,
+.btn-light-blue.disabled:focus,
+.btn-light-blue[disabled]:focus,
+fieldset[disabled] .btn-light-blue:focus,
+.btn-light-blue.disabled.focus,
+.btn-light-blue[disabled].focus,
+fieldset[disabled] .btn-light-blue.focus,
+.btn-light-blue.disabled:active,
+.btn-light-blue[disabled]:active,
+fieldset[disabled] .btn-light-blue:active,
+.btn-light-blue.disabled.active,
+.btn-light-blue[disabled].active,
+fieldset[disabled] .btn-light-blue.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-light-blue .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+
 
 
 .btn-navy {
@@ -1309,9 +1373,10 @@ input[type="search"] {
   border-bottom-color: #fff;
 }
 
+
 .navbar-inverse {
   background-color: #202125;
-  border-color: #202125;
+  border:none;
 }
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
@@ -1326,17 +1391,23 @@ input[type="search"] {
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #9d9d9d;
+  font-family:'latoregular';
+  text-transform:uppercase;
+  border-top:2px solid #202125;
+  font-size:0.9em;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #fff;
   background-color: transparent;
+  border-top:2px solid #33BDDB;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #080808;
+  border-top:2px solid #33BDDB;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -1618,6 +1689,48 @@ fieldset[disabled] .btn-blue.active {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+
+
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 2px;
+}
+
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #373942;
+  border: 1px solid #373942;
+  border-radius: 2px;
+}
+
+.input-group-lg > .form-control {
+  background:#484a53;
+  border-color:#484a53;
+  color:#fff;
+}
+.input-group-lg > .form-control:focus {
+  box-shadow:none;
+}
+
+
+.btn-hero:focus,.btn-hero:active {
+   outline: none !important;
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+  
+
 
 
 
