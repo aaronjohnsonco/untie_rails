@@ -12,11 +12,11 @@ class DashboardController < ApplicationController
   end
 
   def questions
-    @questions = Question.order('created_at desc').page(params[:page]).per(3)
+    @questions = Question.order('created_at desc').page(params[:page]).per(10)
   end
 
   def posts
-  	@posts = Post.order('pub_date desc').page(params[:page]).per(3)
+  	@posts = Post.order('pub_date desc').page(params[:page]).per(10)
   end
 
   def newpost
@@ -35,7 +35,7 @@ class DashboardController < ApplicationController
   end
 
   def prospects
-    @prospects = Prospect.order('created_at desc')
+    @prospects = Prospect.order('created_at desc').page(params[:page]).per(15)
   end
 
 

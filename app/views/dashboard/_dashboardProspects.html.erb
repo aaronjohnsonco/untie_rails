@@ -37,7 +37,7 @@
 
 
 
-					<!-- Modal -->
+<!-- Modal -->
 <div class="modal fade" id="prospectModal-<%= prospect.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -46,19 +46,42 @@
         <h4 class="modal-title text-center" id="myModalLabel"><%= prospect.option %></h4>
       </div>
       <div class="modal-body">
-      	<%= prospect.full_name %>
-        <%= prospect.email %>
+
+      	<p class="latoblack large-text"><%= prospect.full_name %></p>
+      	<p class="latolight main-text"><span class="latobold">Email: </span><%= prospect.email %></p>
+      	<p class="latolight main-text"><span class="latobold">Phone: </span><%= prospect.phone %></p>
+      	<p class="latolight main-text"><span class="latobold">Address: </span><br>
+      		<%= prospect.street %><br>
+      		<%= "#{prospect.city}" + ", " + "#{prospect.state}" + " #{prospect.zip} " %></p>
+
+      	<p class="latolight main-text"><span class="latobold">Resided there how long?: </span><%= prospect.resided_how_long %></p>
+
+      	<% if prospect.number_of_children.present? %>
+      		<p class="latolight main-text"><span class="latobold">Number of children: </span><%= prospect.number_of_children %></p>
+      		<p class="latolight main-text"><span class="latobold">Ages: </span><%= prospect.ages %></p>
+      	<% end %>
+
+      	<% if prospect.co_own_property.present? || prospect.co_own_business.present? %>
+      		<p class="latolight main-text"><span class="latobold">Co-Owns Property: </span><%= prospect.co_own_property %></p>
+      		<p class="latolight main-text"><span class="latobold">Co-Owns Business: </span><%= prospect.co_own_business %></p>
+      	<% end %>
+
+
+
+
+
       </div>
-      <div class="modal-footer">
+      <!--<div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-navy">Save changes</button>
-      </div>
+      </div>-->
     </div>
   </div>
 </div>
 				<% end %>
 
 			</table>
+			<%= paginate @prospects, :theme => 'twitter-bootstrap-3' %>
 		</div>
 	</div>
 </div>

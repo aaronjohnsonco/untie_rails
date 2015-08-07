@@ -19,6 +19,7 @@
 				<h2 class="latohairline about-msg">Send me a message...</h2>
 				<div class="row">
 					<%= form_for Contact.new do |f| %>
+					<%= invisible_captcha %>
 					<div class="col-md-6">
 						<div class="form-group">
 							<%= f.text_field :name, class: "form-control-msg", placeholder: "Full Name" %>

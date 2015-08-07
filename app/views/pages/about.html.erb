@@ -338,6 +338,7 @@
       </div>
       <div class="modal-body">
         <%= form_for Prospect.new do |f| %>
+        <%= invisible_captcha %>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
@@ -424,6 +425,7 @@
       </div>
       <div class="modal-body">
         <%= form_for Prospect.new do |f| %>
+        <%= invisible_captcha %>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
@@ -488,16 +490,17 @@
             </div>
             <div class="col-md-6">
               <div class="checkbox">
-                <input type="checkbox" value="" id="checkbox2">
-                <label for="checkbox2" class="green-label latoregular">
+                
+                <label class="green-label latoregular">
+                  <%= f.check_box :co_own_business %>
                   Check if you co-own a business
                 </label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="checkbox">
-                <input type="checkbox" value="" id="checkbox1">
-                <label for="checkbox1" class="green-label latoregular">
+                <label class="green-label latoregular">
+                  <%= f.check_box :co_own_property %>
                   Check if you co-own real estate
                 </label>
               </div>
@@ -526,6 +529,7 @@
       </div>
       <div class="modal-body">
         <%= form_for Prospect.new do |f| %>
+        <%= invisible_captcha %>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
@@ -601,17 +605,18 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="checkbox checkbox-default">
+              <div class="checkbox">
                 <label class="green-label latoregular">
-                  <input type="checkbox" value="">
+                  <%= f.check_box :co_own_business %>
                   Check if you co-own a business
                 </label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="checkbox">
-                <input type="checkbox" value="" id="checkbox1">
-                <label for="checkbox1" class="green-label latoregular">
+                
+                <label class="green-label latoregular">
+                  <%= f.check_box :co_own_property %>
                   Check if you co-own real estate
                 </label>
               </div>

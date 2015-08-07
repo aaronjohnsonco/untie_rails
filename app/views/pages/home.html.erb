@@ -26,7 +26,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="latolight text-center options-text navy">Choose the option that best meets your needs.</h2>
+        <h2 class="latoblack text-center options-text navy">Choose the option that best meets your needs.</h2>
       </div>
     </div>
 
@@ -152,6 +152,7 @@
 <div class="modal fade" id="package1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <%= form_for Prospect.new do |f| %>
+    <%= invisible_captcha %>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -241,6 +242,7 @@
 <div class="modal fade" id="package2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <%= form_for Prospect.new do |f| %>
+    <%= invisible_captcha %>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -312,16 +314,18 @@
             </div>
             <div class="col-md-6">
               <div class="checkbox">
-                <input type="checkbox" value="" id="checkbox2">
-                <label for="checkbox2" class="green-label latoregular">
+                
+                <label class="green-label latoregular">
+                  <%= f.check_box :co_own_business %>
                   Check if you co-own a business
                 </label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="checkbox">
-                <input type="checkbox" value="" id="checkbox1">
-                <label for="checkbox1" class="green-label latoregular">
+                
+                <label class="green-label latoregular">
+                  <%= f.check_box :co_own_property %>
                   Check if you co-own real estate
                 </label>
               </div>
@@ -345,6 +349,7 @@
 <div class="modal fade" id="package3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <%= form_for Prospect.new do |f| %>
+    <%= invisible_captcha %>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -427,17 +432,20 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="checkbox checkbox-default">
+              <div class="checkbox">
+                
                 <label class="green-label latoregular">
-                  <input type="checkbox" value="">
+                  <%= f.check_box :co_own_business %>
                   Check if you co-own a business
                 </label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="checkbox">
-                <input type="checkbox" value="" id="checkbox1">
-                <label for="checkbox1" class="green-label latoregular">
+                
+                
+                <label class="green-label latoregular">
+                  <%= f.check_box :co_own_property %>
                   Check if you co-own real estate
                 </label>
               </div>

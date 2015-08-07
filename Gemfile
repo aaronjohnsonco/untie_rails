@@ -52,6 +52,7 @@ gem 'bootstrap-kaminari-views'
 gem 'rails-jquery-autocomplete'
 
 gem 'bootstrap-editable-rails'
+gem 'invisible_captcha'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

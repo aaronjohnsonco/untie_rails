@@ -115,6 +115,8 @@ GEM
     hike (1.2.3)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    invisible_captcha (0.8.0)
+      rails
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -247,6 +249,7 @@ DEPENDENCIES
   font-awesome-rails
   friendly_id (~> 5.1.0)
   guard-livereload
+  invisible_captcha
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
