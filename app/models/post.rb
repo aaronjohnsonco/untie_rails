@@ -1,4 +1,9 @@
 class Post < ActiveRecord::Base
+
+  include ActiveModel::Validations
+  validates :title, :body, :pub_date, presence: true
+  
+
 	extend FriendlyId
   friendly_id :title, use: :slugged
 

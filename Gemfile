@@ -53,6 +53,7 @@ gem 'rails-jquery-autocomplete'
 
 gem 'bootstrap-editable-rails'
 gem 'invisible_captcha'
+gem 'html5_validators'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

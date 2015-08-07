@@ -113,6 +113,7 @@ GEM
       guard (~> 2.8)
       multi_json (~> 1.8)
     hike (1.2.3)
+    html5_validators (1.2.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     invisible_captcha (0.8.0)
@@ -249,6 +250,7 @@ DEPENDENCIES
   font-awesome-rails
   friendly_id (~> 5.1.0)
   guard-livereload
+  html5_validators
   invisible_captcha
   jbuilder (~> 2.0)
   jquery-rails
