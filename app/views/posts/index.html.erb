@@ -20,7 +20,7 @@
 					<h2 class="post-title-index"><%= link_to post.title, post, class: "post-link" %></h2>
 					<!--<p class="latobold post-detail">Posted by <%= post.author %> on <%= post.pub_date.strftime('%B %-d, %Y') %></p>-->
 					<div class="post-text">
-						<%= sanitize(post.body).truncate(200).html_safe %>
+						<%= sanitize(post.body).truncate(300).html_safe %>
 					</div>
 					<%= link_to "Read more...", post, class: "read-more" %>
 				</div>
