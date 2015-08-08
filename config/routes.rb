@@ -4,6 +4,12 @@ Rails.application.routes.draw do
 
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
+
+  devise_scope :user do
+    get "/admin/sign-in" => 'devise/sessions#new'
+    get "/admin/sign-up" => 'devise/registrations#new'
+  end
+  
   get 'about', to: 'pages#about'
   get 'faq', to: 'pages#faq'
   get 'bio', to: 'pages#bio'
