@@ -185,7 +185,13 @@
 a.active-nav { color:#86C543; }
 .hero-text-container { padding:100px 0; }
 .hero-container { border-bottom:1px solid #eee;overflow:hidden; }
+
 .untie-img { height:100%; }
+
+@media screen and (max-width: 767px) {
+  .untie-img { display:none; }
+}
+
 .hero-title { font-size:5.0em;margin:0; }
 .hero-text { font-size:2.0em; }
 .profile-img { width:100%; }
