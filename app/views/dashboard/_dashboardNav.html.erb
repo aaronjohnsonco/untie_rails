@@ -11,6 +11,9 @@
 	      <a class="navbar-brand latolight" href="/dashboard">Admin Console</a>
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse">
+	    	<ul class="nav navbar-nav">
+	    		<li><a href="/">Main Site</a></li>
+	    	</ul>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'index' %>"><a href="/dashboard">Dashboard</a></li>
 					<li class="<%= 'active' if params[:controller] == 'dashboard' && params[:action] == 'posts' %>"><a href="/dashboard/posts">Posts</a></li>
