@@ -192,8 +192,8 @@ a.active-nav { color:#86C543; }
   .untie-img { display:none; }
 }
 
-.hero-title { font-size:5.0em;margin:0; }
-.hero-text { font-size:2.0em; }
+.hero-title { font-size:4.0em;margin:0 0 5px 0; }
+.hero-text { font-size:2.0em;line-height:1.2; }
 .profile-img { width:100%; }
 .profile-img_sq { border-radius:50%;width:100%; }
 .profile-container { background:#eee;padding:70px 0; }
@@ -269,8 +269,11 @@ footer {
 .question-container { margin-bottom:25px; }
 .question-text { font-size:1.3em; }
 .question-hdr { margin:0 0 10px 0;font-size:4.0em; }
+.helpful-links { margin:10px 0 10px 0;font-size:2.0em; }
 .question-main { margin-bottom:0;margin-top:10px }
 .faq-question { margin-bottom:0; }
+
+.next-steps { margin-bottom:0; }
 
 
 /* BIO PAGE */
@@ -909,7 +912,7 @@ fieldset[disabled] .btn-green.active {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #86C543;
+  color: #ACCC1D;
   background-color: transparent;
 }
 .navbar-default .navbar-text {

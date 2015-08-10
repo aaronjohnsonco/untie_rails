@@ -4,6 +4,26 @@
 	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-	
+	<h2>Basic Divorce Prospect</h2>
+	<p>
+		Name: <%= @prospect.full_name %><br>
+		Email: <%= @prospect.email %><br>
+		Phone: <%= @prospect.phone %>
+	</p>
+	<p>
+		Address:<br>
+		<%= @prospect.street %><br>
+		<%= @prospect.city %>, <%= @prospect.state %> <%= @prospect.zip %>
+	</p>
+
+	<p>
+		Date of Marriage: <%= @prospect.marriage_date %><br>
+		County of Marriage: <%= @prospect.county_of_marriage %>
+	</p>
+
+	<p>
+		How long resided there? <%= @prospect.resided_how_long %>
+	</p>
+
 </body>
 </html>

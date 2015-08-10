@@ -22,7 +22,7 @@
 					<div class="post-text">
 						<%= sanitize(post.body).truncate(300).html_safe %>
 					</div>
-					<%= link_to "Read more...", post, class: "read-more" %>
+					<p class="latolight main-text"><%= link_to "Continue reading...", post, class: "read-more" %></p>
 				</div>
 				<% end %>
 			</div>
