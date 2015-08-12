@@ -6,41 +6,41 @@ class PostsController < ApplicationController
 		@post = Post.create(post_params)
 		if params[:publish]
 			@post.status = "published"
-			@post.save
-			redirect_to dashboard_posts_path
+			if @post.save
+				redirect_to(dashboard_posts_path, flash: :success)
+			else
+				redirect_to(dashboard_posts_path, flass: :error)
+			end
 		elsif params[:draft]
 			@post.status = "draft"
-			@post.save
-			redirect_to dashboard_posts_path
-		else
-			redirect_to dashboard_path
+			if @@post.save
+				redirect_to(dashboard_posts_path, flash: :success)
+			else
+				redirect_to(dashboard_posts_path, flash: :error)
+			end
 		end
 	end
 
 	def update
 		@post = Post.friendly.find(params[:id])
 		if params[:publish]
+			@post.status = "published"
 			if @post.update(post_params)
-				redirect_to dashboard_posts_path
-				# ALERT
+				redirect_to(dashboard_posts_path, flash: :success)
 			else
-				redirect_to dashboard_posts_path
-				# ALERT
+				redirect_to(dashboard_posts_path, flass: :error)
 			end
 		elsif params[:draft]
+			@post.status = "draft"
 			if @post.update(post_params)
-				redirect_to dashboard_posts_path
-				# ALERT
+				redirect_to(dashboard_posts_path, flash: :success)
 			else
-				redirect_to dashboard_posts_path
-				# ALERT
+				redirect_to(dashboard_posts_path, flass: :error)
 			end
 		end
 	end
 
 	def index
-		
-
 
 		if params[:search]
 			@posts = Post.search(params[:search])

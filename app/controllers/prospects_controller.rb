@@ -8,9 +8,9 @@ class ProspectsController < ApplicationController
 			@prospect.status = "Pending"
 			if @prospect.save
 				ProspectMailer.basic_divorce_email(@prospect).deliver
-				redirect_to basic_divorce_path
+				redirect_to(basic_divorce_path, flash: :success)
 			else
-				redirect_to root_path
+				redirect_to(root_path, flash: :error)
 			end
 		end
 
@@ -19,9 +19,9 @@ class ProspectsController < ApplicationController
 			@prospect.option = "Divorce with Property"
 			if @prospect.save
 				ProspectMailer.divorce_property_email(@prospect).deliver
-				redirect_to divorce_with_property_path
+				redirect_to(divorce_with_property_path, flash: :success)
 			else
-				redirect_to root_path
+				redirect_to(root_path, flash: :error)
 			end
 		end
 
@@ -30,9 +30,9 @@ class ProspectsController < ApplicationController
 			@prospect.option = "Divorce with Children"
 			if @prospect.save
 				ProspectMailer.divorce_children_email(@prospect).deliver
-				redirect_to divorce_with_children_path
+				redirect_to(divorce_with_children_path, flash: :success)
 			else
-				redirect_to root_path
+				redirect_to(root_path, flash: :error)
 			end
 		end
 
@@ -41,9 +41,9 @@ class ProspectsController < ApplicationController
 			@prospect.option = "Basic Divorce"
 			if @prospect.save
 				ProspectMailer.basic_divorce_email(@prospect).deliver
-				redirect_to basic_divorce_path
+				redirect_to(basic_divorce_path, flash: :success)
 			else
-				redirect_to about_path
+				redirect_to(about_path, flass: :error)
 			end
 		end
 
@@ -52,9 +52,9 @@ class ProspectsController < ApplicationController
 			@prospect.option = "Divorce with Property"
 			if @prospect.save
 				ProspectMailer.divorce_property_email(@prospect).deliver
-				redirect_to divorce_with_property_path
+				rredirect_to(divorce_with_property_path, flash: :success)
 			else
-				redirect_to about_path
+				redirect_to(about_path, flass: :error)
 			end
 		end
 
@@ -63,9 +63,9 @@ class ProspectsController < ApplicationController
 			@prospect.option = "Divorce with Children"
 			if @prospect.save
 				ProspectMailer.divorce_children_email(@prospect).deliver
-				redirect_to divorce_with_children_path
+				redirect_to(divorce_with_children_path, flash: :success)
 			else
-				redirect_to about_path
+				redirect_to(about_path, flass: :error)
 			end
 		end
 

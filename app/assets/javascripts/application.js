@@ -18,5 +18,8 @@
 //= require bootstrap-editable
 //= require bootstrap-editable-rails
 //= require autocomplete-rails
+//= require growlyflash
 //= require turbolinks
 //= require_tree .
+
+

@@ -25,7 +25,6 @@ ready = ->
 			}
 		]
 
-
 	
 
 $(document).ready(ready)

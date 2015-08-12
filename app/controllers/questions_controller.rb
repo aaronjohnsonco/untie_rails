@@ -4,14 +4,37 @@ class QuestionsController < ApplicationController
 		@question = Question.create(question_params)
 		if params[:publish]
 			@question.status = "published"
-			@question.save
-			redirect_to dashboard_questions_path
+			if @question.save
+				redirect_to(dashboard_questions_path, flash: :success)
+			else
+				redirect_to(dashboard_questions_path, flash: :error)
+			end
 		elsif params[:draft]
 			@question.status = "draft"
-			@question.save
-			redirect_to dashboard_questions_path
-		else
-			redirect_to dashboard_path
+			if @question.save
+				redirect_to(dashboard_questions_path, flash: :success)
+			else
+				redirect_to(dashboard_questions_path, flash: :error)
+			end
+		end
+	end
+
+	def update
+		@question = Question.find(params[:id])
+		if params[:publish]
+			@question.status = "published"
+			if @question.update(question_params)
+				redirect_to(dashboard_questions_path, flash: :success)
+			else
+				redirect_to(dashboard_questions_path, flash: :error)
+			end
+		elsif params[:draft]
+			@question.status = "draft"
+			if @question.update(question_params)
+				redirect_to(dashboard_questions_path, flash: :success)
+			else
+				redirect_to(dashboard_questions_path, flash: :error)
+			end
 		end
 	end
 

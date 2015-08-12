@@ -55,6 +55,9 @@ gem 'bootstrap-editable-rails'
 gem 'invisible_captcha'
 gem 'html5_validators'
 
+gem "bootstrap_flash_messages", "~> 1.0.1"
+gem 'growlyflash'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
