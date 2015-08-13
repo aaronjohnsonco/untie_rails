@@ -95,7 +95,7 @@ class ProspectsController < ApplicationController
 	private
 
 		def prospect_params
-			params.require(:prospect).permit(:full_name, :marriage_date, :county_of_marriage, :street, :city, :state, :zip, :resided_how_long, :email, :phone, :number_of_children, :ages, :co_own_business, :co_own_property, :option, :status)
+			params.require(:prospect).permit(:full_name, :full_name_spouse, :marriage_date, :county_of_marriage, :street, :city, :state, :zip, :resided_how_long, :email, :phone, :number_of_children, :ages, :co_own_business, :co_own_property, :option, :status)
 		end
 
 end

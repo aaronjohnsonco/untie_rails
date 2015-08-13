@@ -6,18 +6,18 @@ class ContactsController < ApplicationController
 		if params[:bio]
 			if @contact.save
 				ContactMailer.contact_email(@contact).deliver
-				redirect_to bio_path
+				redirect_to(bio_path, flash: :success)
 			else
-				redirect_to bio_path
+				redirect_to(bio_path, flash: :error)
 			end
 		end
 
 		if params[:ask]
 			if @contact.save
 				ContactMailer.question_email(@contact).deliver
-				redirect_to faq_path
+				redirect_to(faq_path, flash: :success)
 			else
-				redirect_to faq_path
+				redirect_to(faq_path, flash: :error)
 			end
 		end
 

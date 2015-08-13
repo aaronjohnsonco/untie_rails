@@ -39,6 +39,11 @@ en:
         create:
             success: "Your information was sent successfully!"
             error: "Sorry, your information did not get sent."
+
+    contacts:
+        create:
+            success: "Your message was sent successfully!"
+            error: "Oops. Your message didn't get sent."
     #
     # Inside controller:
     # def create
