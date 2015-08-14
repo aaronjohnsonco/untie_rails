@@ -286,6 +286,7 @@ footer {
 .question-hdr { margin:0 0 10px 0;font-size:4.0em; }
 .helpful-links { margin:10px 0 10px 0;font-size:2.0em; }
 .question-main { margin-bottom:0;margin-top:15px }
+.activestate { color:#ACCC1D; }
 .faq-question { margin-bottom:0; }
 
 .next-steps { margin-bottom:0; }
@@ -1369,7 +1370,8 @@ input[type="search"] {
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 .panel-body {
-  padding: 0 10px;
+  background:#f6f6f6;
+  padding: 10px 20px;
   p {
     font-family:'latolight';
     font-size:1.15em;
@@ -1521,6 +1523,15 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .panel-heading > h3 > a { font-family:'latoregular';color:#34302D;font-size:0.9em; }
 .panel-heading > h3 > a:hover { color:#ACCC1D;text-decoration:none; }
 .panel-heading > h3 > a:focus { text-decoration:none; }
+
+/*
+.active-panel { color:#ACCC1D;text-decoration:none;font-family:'latoregular';font-size:0.9em; }
+.non-active-panel { font-family:'latoregular';color:#34302D;font-size:0.9em; }
+.active-panel:hover { color:#ACCC1D;text-decoration:none;font-family:'latoregular';font-size:0.9em; }
+.non-active-panel:hover { font-family:'latoregular';color:#34302D;font-size:0.9em;text-decoration:none; }
+.active-panel:focus { color:#ACCC1D;text-decoration:none;font-family:'latoregular';font-size:0.9em; }
+.non-active-panel:focus { font-family:'latoregular';color:#34302D;font-size:0.9em;text-decoration:none; }
+*/
 
 .btn-default {
   color: #333;
