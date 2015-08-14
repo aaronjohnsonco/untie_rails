@@ -59,4 +59,42 @@
 		</div>
 	</div>
 </div>
+<div class="footer-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h3 class="latolight ft-hdr light-yellow">Pages</h3>
+        <p class="latolight pages-ft"><%= link_to "About", about_path, class: "footer-link" %></p>
+        <p class="latolight pages-ft"><%= link_to "Bio", bio_path, class: "footer-link" %></p>
+        <p class="latolight pages-ft"><%= link_to "Blog", posts_path, class: "footer-link" %></p>
+        <p class="latolight pages-ft"><%= link_to "FAQ", faq_path, class: "footer-link" %></p>
+      </div>
+      <div class="col-md-5">
+        <h3 class="latolight ft-hdr light-yellow">Recent Posts</h3>
+        <% for post in @footer_posts %>
+        <p class="latolight recent-ft"><%= link_to post.title, post, class: 'footer-link' %></p>
+        <% end %>
+      </div>
+      <div class="col-md-4">  
+        <h3 class="latolight ft-hdr light-yellow">Follow</h3>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <%= link_to image_tag("facebook_g.png", width: "50", class: "follow-img-g"), "https://www.facebook.com/ConnieChadwickLaw", target: "_blank" %>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <%= link_to image_tag("linkedin_g.png", width: "50", class: "follow-img-g"), "https://www.linkedin.com/pub/connie-chadwick/78/194/543", target: "_blank" %>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <%= link_to image_tag("twitter_g.png", width: "50", class: "follow-img-g"), "https://twitter.com/AttyGirl2014", target: "_blank" %>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <%= link_to image_tag("google_plus_g.png", width: "50", class: "follow-img-g"), "https://plus.google.com/u/0/112227991239529852628/posts", target: "_blank" %>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
 
