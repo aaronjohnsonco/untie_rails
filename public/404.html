@@ -56,12 +56,17 @@
 
 <body>
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <%= render 'partials/navbar' %>
+
+<div class="page-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="latoblack">Oops...looks like the page you were looking for does not exist.</h2>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
+</div>
+  <%= render 'partials/footer' %>
 </body>
 </html>
