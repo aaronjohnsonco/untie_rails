@@ -57,6 +57,7 @@ gem 'html5_validators'
 
 gem "bootstrap_flash_messages", "~> 1.0.1"
 gem 'growlyflash'
+gem 'gaffe'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
