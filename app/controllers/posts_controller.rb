@@ -42,13 +42,16 @@ class PostsController < ApplicationController
 
 	def index
 
-		if params[:search]
-			@posts = Post.search(params[:search])
+		@posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc')
 			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
-		else
-			@posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc')
-			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
-		end
+
+		#if params[:search]
+		#	@posts = Post.search(params[:search])
+		#	@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
+		#else
+		#	@posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc')
+		#	@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
+		#end
 		#@posts = Post.search(params[:search])
 		#if @posts.class == Array
 		#	@posts = Kaminari.paginate_array(@posts).page(params[:page]).per(4)
@@ -59,10 +62,10 @@ class PostsController < ApplicationController
 
 		if params[:tag]
 			@posts = Post.tagged_with(params[:tag]).order('pub_date desc').where('status = ? AND pub_date <= ?', 'published', Date.today)
-			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').limit(4)
+			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
 		else
 			@posts = Post.order('pub_date desc').where('status = ? AND pub_date <= ?', 'published', Date.today)
-			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').limit(4)
+			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
 		end
 	end
 
