@@ -44,8 +44,10 @@ class PostsController < ApplicationController
 
 		if params[:search]
 			@posts = Post.search(params[:search])
+			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
 		else
 			@posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc')
+			@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
 		end
 		#@posts = Post.search(params[:search])
 		#if @posts.class == Array
