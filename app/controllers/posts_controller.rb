@@ -71,7 +71,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.friendly.find(params[:id])
-		@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').limit(4)
+		@footer_posts = Post.where('pub_date <= ? AND status = ?', Date.today, 'published').order('pub_date desc').limit(4)
 	end
 
 	def destroy
