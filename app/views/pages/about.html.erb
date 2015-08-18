@@ -126,7 +126,11 @@
 				<h1 class="latoblack step-number">02</h1>
 				<h1 class="latoregular step-title">Complete Divorce Packet & Initial Consult</h1>
 
-				<p class="latolight main-text step-text">Clients must <%= link_to "download", "" %> and complete the divorce packet and bring it along with payment in full to the consultation appointment.  Both parties will attend. No additional parties or children will be permitted. Clients should have an agreed settlement in mind, but they are free to ask for advice on how to handle certain situations. We act as a facilitator in reaching a full settlement.</p>
+				<p class="latolight main-text step-text">Clients must 
+        <%= link_to pages_download_pdf_url do %> 
+          download
+        <% end %>
+        and complete the divorce packet and bring it along with payment in full to the consultation appointment.  Both parties will attend. No additional parties or children will be permitted. Clients should have an agreed settlement in mind, but they are free to ask for advice on how to handle certain situations. We act as a facilitator in reaching a full settlement.</p>
 			</div>
 			<div class="col-md-4">
 				<h1 class="latoblack step-number">03</h1>

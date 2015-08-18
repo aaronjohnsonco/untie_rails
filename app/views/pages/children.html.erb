@@ -8,7 +8,7 @@
 
 				<div class="pdf-doc">
 					<p class="latolight main-text">
-					<%= link_to "" do %>
+					<%= link_to pages_download_pdf_url do %>
 						<%= image_tag "pdf.png", height: "40", style: "margin-right:10px;" %> Divorce Packet PDF</p>
 					<% end %>
 				</p>
@@ -26,6 +26,7 @@
 			</div>
 			<div class="col-md-offset-1 col-md-3">
 				<h2 class="latoblack helpful-links">Helpful Links</h2>
+				<%= render 'helplinks' %>
 			</div>
 		</div>
 	</div>

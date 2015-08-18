@@ -4,11 +4,11 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h2 class="latoblack question-hdr">Divorce with Property</h2>
-				<p class="latolight main-text">You have taken the first step of filling out the initial information needed to do a conflict check to ensure that we can continue. Once we confirm that there are no conflicts, we will contact you and schedule the initial consult. Download the divorce packet and print it soff. This information packet must be filled out completely and brought to your initial consult. If there are any questions about the forms you can email us at <%= mail_to "email@email.com" %>. </p>
+				<p class="latolight main-text">You have taken the first step of filling out the initial information needed to do a conflict check to ensure that we can continue. Once we confirm that there are no conflicts, we will contact you and schedule the initial consult. Download the divorce packet and print it soff. This information packet must be filled out completely and brought to your initial consult. If there are any questions about the forms you can email us at <%= mail_to "vcolvin@sbdlaw.net" %>. </p>
 
 				<div class="pdf-doc">
 					<p class="latolight main-text">
-					<%= link_to "" do %>
+					<%= link_to pages_download_pdf_url do %>
 						<%= image_tag "pdf.png", height: "40", style: "margin-right:10px;" %> Divorce Packet PDF</p>
 					<% end %>
 				</p>
@@ -26,6 +26,7 @@
 			</div>
 			<div class="col-md-offset-1 col-md-3">
 				<h2 class="latoblack helpful-links">Helpful Links</h2>
+				<%= render 'helplinks' %>
 			</div>
 		</div>
 	</div>
