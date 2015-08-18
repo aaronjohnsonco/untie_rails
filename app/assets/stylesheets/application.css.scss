@@ -257,9 +257,10 @@ footer {
 }
 @media screen and (max-width: 767px) {
   /*.about-img { width:100%; }*/
+  .about-text { font-size:1.3em; }
 }
 .about-hdr { margin:0 0 20px 0;font-size:4.0em; }
-.about-text { font-size:1.3em; }
+.about-text { font-size:1.3em;margin-left:330px;  }
 .about-msg { font-size:2.25em;color:#fff;margin:0 0 20px 0; }
 .message-container { background:#34302D;padding:50px 0 75px 0;border-bottom:1px solid #222; }
 
