@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get 'dashboard/questions/:id/edit', to: 'dashboard#editquestion', as: "edit_question"
   get 'pages/download_pdf'
   get 'pages/download_parenting_class_pdf'
+  get 'pages/download_intermediary_pdf'
 
   get 'posts/tags/:tag', to: 'posts#index', as: "tag"
 

@@ -46,6 +46,14 @@ class PagesController < ApplicationController
     )
   end
 
+  def download_intermediary_pdf
+    send_file(
+      "#{Rails.root}/public/documents/Intermediary.pdf",
+      filename: "Intermediary",
+      type: "application/pdf"
+    )
+  end
+
 
 
 
