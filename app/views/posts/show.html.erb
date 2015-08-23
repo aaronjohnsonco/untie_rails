@@ -10,6 +10,11 @@
 						<%= sanitize @post.body %>
 					</div>
 				</div>
+				<p class="latolight main-text">
+					<%= link_to posts_path do %>
+						<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back to all posts
+					<% end %>
+				</p>
 			</div>
 			<div class="col-md-offset-1 col-md-3">
 				<div class="sidebar-container">
