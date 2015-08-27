@@ -15,7 +15,8 @@ class ProspectMailer < ActionMailer::Base
 	def divorce_children_email(prospect)
 		@prospect = prospect
 		emails = ['cchadwick@sbdlaw.net', 'Vcolvin@sbdlaw.net', 'aaron@bigmooncreative.com']
-		mail(to: emails, subject: "Divorce with Children Prospect", from: @prospect.email)
+		email = 'aaronjohnsonis@gmail.com'
+		mail(to: email, subject: "Divorce with Children Prospect", from: @prospect.email)
 	end
 
 	def contested_divorce_email(prospect)
