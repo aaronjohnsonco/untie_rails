@@ -26,8 +26,8 @@
         <li class="<%= 'active' if params[:controller] == 'pages' && params[:action] == 'faq' %>"><a href="/faq">FAQ</a></li>
         <li class="<%= 'active' if params[:controller] == 'posts' && params[:action] == 'index' || params[:action] == 'show' %>"><a href="/posts">Blog</a></li>
         <li>
-          <%= link_to "" do %>
-            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 615-550-2800
+          <%= link_to "tel:6155502800" do %>
+            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (615) 550-2800
           <% end %>
         </li>
         <% if user_signed_in? %>
