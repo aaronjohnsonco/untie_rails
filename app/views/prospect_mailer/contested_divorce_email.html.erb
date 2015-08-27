@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+	<h2>Contested Divorce Prospect Info</h2>
+	<p>
+		Name: <%= @prospect.full_name %><br>
+		Email: <%= @prospect.email %><br>
+		Phone: <%= @prospect.phone %>
+	</p>
+	<p>Spouse's Name: <%= @prospect.full_name_spouse %></p>
+	
+	<p>
+		Address:<br>
+		<%= @prospect.street %><br>
+		<%= @prospect.city %>, <%= @prospect.state %> <%= @prospect.zip %>
+	</p>
+
+	<p>
+		How long resided there? <%= @prospect.resided_how_long %>
+	</p>
+
+
+	<p>
+		Date of Marriage: <%= @prospect.marriage_date %><br>
+		County of Marriage: <%= @prospect.county_of_marriage %>
+	</p>
+
+	
+
+	<p>
+		Number of children: <%= @prospect.number_of_children %><br>
+		Ages: <%= @prospect.ages %>
+	</p>
+
+	<p>
+		Do you co-own a business? <%= @prospect.co_own_business %><br>
+		Do you co-own property? <%= @prospect.co_own_property %>
+	</p>
+	<p>
+		Do you co-own a business? 
+		<% if @prospect.co_own_business == true %>
+		Yes 
+		<% else %>
+		No
+		<% end %>
+		<br>
+		Do you co-own property? 
+		<% if @prospect.co_own_property == true %>
+		Yes 
+		<% else %>
+		No
+		<% end %>
+	</p>
+	
+</body>
+</html>

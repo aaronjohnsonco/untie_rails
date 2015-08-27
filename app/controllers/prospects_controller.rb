@@ -36,6 +36,17 @@ class ProspectsController < ApplicationController
 			end
 		end
 
+		if params[:contested]
+			@prospect.status = "Pending"
+			@prospect.option = "Contested Divorce"
+			if @prospect.save
+				ProspectMailer.contested_divorce_email(@prospect).deliver
+				redirect_to(root_path, flash: :success)
+			else
+				redirect_to(root_path, flash: :error)
+			end
+		end
+
 		if params[:about1]
 			@prospect.status = "Pending"
 			@prospect.option = "Basic Divorce"
