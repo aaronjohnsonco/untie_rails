@@ -203,6 +203,15 @@ a.active-nav { color:#86C543; }
   .untie-img { display:none; }
 }
 
+.noTopMargin { margin-top:0; }
+blockquote {
+  padding: 20px 20px;
+  margin-bottom:0;
+  /*margin: 0 0 20px;*/
+  /*font-size: 17.5px;*/
+  border-left: 7px solid #ddd;
+}
+
 .hero-title { font-size:4.0em;margin:0 0 5px 0; }
 .hero-text { font-size:2.0em;line-height:1.2; }
 .profile-img { width:100%; }
