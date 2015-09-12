@@ -23,5 +23,21 @@ class ProspectMailer < ActionMailer::Base
 		emails = ['cchadwick@sbdlaw.net', 'Vcolvin@sbdlaw.net', 'aaron@bigmooncreative.com']
 		mail(to: emails, subject: "Divorce with Children Prospect", from: @prospect.email)
 	end
-	
+
+	def basic_divorce_client(prospect)
+		@prospect = prospect
+		mail(to: @prospect.email, subject: "Basic Divorce", from: "cchadwick@sbd.net")
+	end
+
+	def property_divorce_client(prospect)
+		@prospect = prospect
+		mail(to: @prospect.email, subject: "Divorce with Property", from: "cchadwick@sbd.net")
+	end
+
+	def children_divorce_client(prospect)
+		@prospect = prospect
+		mail(to: @prospect.email, subject: "Divorce with Children", from: "cchadwick@sbd.net")
+	end
+
+
 end
