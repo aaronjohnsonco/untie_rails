@@ -2,7 +2,7 @@ class ProspectMailer < ActionMailer::Base
 
 	def basic_divorce_email(prospect)
 		@prospect = prospect
-		emails = ['cchadwick@sbdlaw.net', 'Vcolvin@sbdlaw.net', 'aaron@bigmooncreative.com']
+		emails = ['cchadwick@sbdlaw.net', 'Vcolvin@sbdlaw.net', 'aaron@bigmooncreative.com', 'robin@sbdlaw.net']
 		mail(to: emails, subject: "Basic Divorce Prospect", from: @prospect.email)
 	end
 

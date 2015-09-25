@@ -2,6 +2,8 @@
 <html>
 <head>
   <title><%= yield :title %> - Connie Chadwick Law</title>
+  <meta name="description" content="<%= yield :content %>">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= growlyflash_static_notices %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
