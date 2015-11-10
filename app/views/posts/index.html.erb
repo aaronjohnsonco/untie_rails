@@ -1,15 +1,6 @@
 <% content_for :title, "Blog" %>
 <%= render 'partials/navbar' %>
 <div class="post-pg">
-	<!--<div class="mobile-search">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12"><input type="text" class="form-control" placeholder="Search" /></div>
-			</div>
-		</div>
-	</div>-->
-	
-
 	<div class="container">
 		<div class="row">
 			
@@ -19,7 +10,6 @@
 				<div class="post-container">
 					<p class="latobold post-detail-top"><%= post.pub_date.strftime('%B') %> <%= post.pub_date.day.ordinalize %> &mdash; <span class="pale-green latoregular"><%= raw tag_links(post.all_tags) %></span></p>
 					<h2 class="post-title-index"><%= link_to post.title, post, class: "post-link" %></h2>
-					<!--<p class="latobold post-detail">Posted by <%= post.author %> on <%= post.pub_date.strftime('%B %-d, %Y') %></p>-->
 					<div class="post-text">
 						<%= sanitize(post.body).truncate(300).html_safe %>
 					</div>
@@ -29,11 +19,6 @@
 			</div>
 			<div class="col-md-offset-1 col-md-3">
 				<div class="sidebar-container">
-					<!--<%= form_for posts_path, method: "get" do %>
-						<%= search_field_tag :search, params[:search], class: "form-control", placeholder: "Search" %>
-						<%= submit_tag "Search", name: nil, class: "hidden" %>
-					<% end %>-->
-					
 
 					<div class="sidebar-follow">
 						<h3 class="latoregular text-center">Follow</h3>
