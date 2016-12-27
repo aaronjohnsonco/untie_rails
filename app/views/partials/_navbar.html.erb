@@ -15,12 +15,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        
-       
+
+
       </ul>
-      
+
       <ul class="nav navbar-nav navbar-right">
-  
+
 
         <li class="<%= 'active' if params[:controller] == 'pages' && params[:action] == 'about' %>"><a href="/about">About</a></li>
         <li class="<%= 'active' if params[:controller] == 'pages' && params[:action] == 'bio' %>"><a href="/bio">Bio</a></li>
@@ -28,7 +28,7 @@
         <li class="<%= 'active' if params[:controller] == 'posts' && params[:action] == 'index' || params[:action] == 'show' %>"><a href="/posts">Blog</a></li>
         <li>
           <%= link_to "tel:6155502800" do %>
-            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (615) 550-2800
+            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (615) 379-7900
           <% end %>
         </li>
         <% if user_signed_in? %>
@@ -39,4 +39,3 @@
   </div><!-- /.container-fluid -->
 </nav>
 </div>
-
